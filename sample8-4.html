@@ -71,19 +71,7 @@
         }
 
 
-        // バンプマップ読み込み
-        var bump = textureLoader.load("stone-bump.jpg");
-        mat.bumpMap = bump;
-        mat.bumpscale = 0.2;
-
-       // 箱を作成
-        var geometry = new THREE.BoxGeometry(1, 1, 1);
-        var box = new THREE.Mesh(geometry, mat);
-        box.position.set(0,0,0); //位置を指定
-        scene.add(box);   // シーンに追加
-
-        
-
+       
         
 
      

@@ -82,6 +82,7 @@
         sprite1.scale.set(2,2,2);
         scene.add(sprite1);
         
+         // テクスチャー読み込み
         var texture3 = textureLoader.load("stone.jpg");
         var mat = new THREE.MeshPhongMaterial();
         mat.map = texture3;
@@ -89,7 +90,7 @@
         // 球を作成
         var geometry2 = new THREE.SphereGeometry(0.5, 32, 32 ); ;
         var Sphere = new THREE.Mesh(geometry2, mat);
-        Sphere.position.set(4,5,0);
+        Sphere.position.set(3,2,0);
         scene.add(Sphere);
 
 

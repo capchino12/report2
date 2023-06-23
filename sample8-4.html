@@ -21,7 +21,7 @@
         document.body.appendChild(renderer.domElement);
         renderer.setSize(width, height);
         // 背景の色を設定
-        renderer.setClearColor(0xffffdd);
+        renderer.setClearColor(#87ceeb);
 
 
         // シーンを作成
@@ -69,6 +69,13 @@
 
           scene.add(sprite);
         }
+
+         // 箱を作成
+        var geometry = new THREE.BoxGeometry(1, 1, 1);
+        var material = new THREE.MeshPhongMaterial({ color: 0x0000ff });
+        var box = new THREE.Mesh(geometry, material);
+        box.position.set(0,0,0); //位置を指定
+        scene.add(box);   // シーンに追加
         
         update();
 

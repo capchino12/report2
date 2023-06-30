@@ -44,7 +44,7 @@
         scene.add(group);
         const geometry = new THREE.TorusGeometry( 10, 3, 16, 100 );
         //const geometry = new THREE.BoxBufferGeometry(50, 50, 50);
-        const material = new THREE.MeshStandardMaterial();
+       const material = new THREE.MeshBasicMaterial( { color: 0xFF0000 } );
 
         for (let i = 0; i < 1000; i++) {
           const mesh = new THREE.Mesh(geometry, material);

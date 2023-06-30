@@ -40,11 +40,7 @@
       let bgTexture = new THREE.TextureLoader().load("tainai.jpeg");
      scene.background = bgTexture;
 
-        // helper
-        const gridHelper = new THREE.GridHelper(1000,20); // size, step
-        scene.add(gridHelper);
-        const axisHelper = new THREE.AxisHelper(1000); //軸の長さ　X：赤、Y：緑、z：青
-        scene.add(axisHelper);
+       
 
         // グループを作成（赤血球）
         const group = new THREE.Group();

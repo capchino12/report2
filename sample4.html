@@ -3,18 +3,7 @@
     <meta charset="utf-8" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
     <script src="OrbitControls.js"></script>
-    <script src="three.r134.min.js"></script>
-  <script src="vanta.fog.min.js"></script>
-  <script>
-  VANTA.FOG({
-  el: "#your-element-selector",
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200.00,
-  minWidth: 200.00
-})
-</script>
+    
     <script>
       // ページの読み込みを待つ
       window.addEventListener('load', init);
@@ -51,7 +40,7 @@
         const axisHelper = new THREE.AxisHelper(1000); //軸の長さ　X：赤、Y：緑、z：青
         scene.add(axisHelper);
 
-        // グループを作成
+        // グループを作成（赤血球）
         const group = new THREE.Group();
         scene.add(group);
         const geometry = new THREE.TorusGeometry( 10, 8, 16, 100 );
@@ -68,6 +57,26 @@
           mesh.rotation.z = Math.random() * 2 * Math.PI;
           // グループに格納する
           group.add(mesh);
+        }
+
+
+        // グループを作成（白血球）
+        const group2 = new THREE.Group();
+        scene.add(group2);
+        const geometry2 = new THREE.TorusGeometry( 10, 8, 16, 100 );
+        //const geometry = new THREE.BoxBufferGeometry(50, 50, 50);
+       const material2 = new THREE.MeshBasicMaterial( { color: 0xffffff } );
+
+        for (let i = 0; i < 1000; i++) {
+          const mesh2 = new THREE.Mesh(geometry2, material2);
+          mesh.position.x = (Math.random() - 0.5) * 2000;
+          mesh.position.y = (Math.random() - 0.5) * 2000;
+          mesh.position.z = (Math.random() - 0.5) * 2000;
+          mesh.rotation.x = Math.random() * 2 * Math.PI;
+          mesh.rotation.y = Math.random() * 2 * Math.PI;
+          mesh.rotation.z = Math.random() * 2 * Math.PI;
+          // グループに格納する
+          group.add(mesh2);
         }
 
      

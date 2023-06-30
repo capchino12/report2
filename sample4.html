@@ -36,6 +36,10 @@
         const controls = new THREE.OrbitControls(camera);
         controls.autoRotate = true;
 
+        //背景の設定@シーン
+      let bgTexture = new THREE.TextureLoader().load("img/earth.png");
+     scene.background = bgTexture;
+
         // helper
         const gridHelper = new THREE.GridHelper(1000,20); // size, step
         scene.add(gridHelper);

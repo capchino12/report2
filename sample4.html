@@ -64,17 +64,17 @@
         const group2 = new THREE.Group();
         scene.add(group2);
         const geometry2 = new THREE.TorusGeometry( 10, 8, 16, 100 );
-        //const geometry = new THREE.BoxBufferGeometry(50, 50, 50);
+        //const geometry２ = new THREE.BoxBufferGeometry(50, 50, 50);
        const material2 = new THREE.MeshBasicMaterial( { color: 0xffffff } );
 
         for (let i = 0; i < 1000; i++) {
           const mesh2 = new THREE.Mesh(geometry2, material2);
-          mesh.position.x = (Math.random() - 0.5) * 2000;
-          mesh.position.y = (Math.random() - 0.5) * 2000;
-          mesh.position.z = (Math.random() - 0.5) * 2000;
-          mesh.rotation.x = Math.random() * 2 * Math.PI;
-          mesh.rotation.y = Math.random() * 2 * Math.PI;
-          mesh.rotation.z = Math.random() * 2 * Math.PI;
+          mesh2.position.x = (Math.random() - 0.5) * 2000;
+          mesh2.position.y = (Math.random() - 0.5) * 2000;
+          mesh2.position.z = (Math.random() - 0.5) * 2000;
+          mesh2.rotation.x = Math.random() * 2 * Math.PI;
+          mesh2.rotation.y = Math.random() * 2 * Math.PI;
+          mesh2.rotation.z = Math.random() * 2 * Math.PI;
           // グループに格納する
           group.add(mesh2);
         }

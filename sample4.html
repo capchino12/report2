@@ -128,6 +128,13 @@
 
         // 毎フレーム時に実行されるループイベントです
         function tick() {
+
+          // ラジアンに変換する
+          const radian = rot * Math.PI / 180;
+          // 角度に応じてカメラの位置を設定
+          camera.position.x = 1000 * Math.sin(radian);
+          camera.position.z = 1000 * Math.cos(radian);
+          
           // レンダリング
           group.rotateY(0.01);
           renderer.render(scene, camera);

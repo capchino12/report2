@@ -97,11 +97,11 @@ for (let i = 0; i < LENGTH; i++) {
 }
 
 // 形状データを作成
-const geometry = new THREE.BufferGeometry();
-geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
+const geometry3 = new THREE.BufferGeometry();
+geometry3.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
 
 // マテリアルを作成
-const material = new THREE.PointsMaterial({
+const material3 = new THREE.PointsMaterial({
   // 一つ一つのサイズ
   size: 10,
   // 色
@@ -109,8 +109,8 @@ const material = new THREE.PointsMaterial({
 });
 
 // 物体を作成
-const mesh = new THREE.Points(geometry, material);
-scene.add(mesh); // シーンは任意の THREE.Scene インスタンス
+const mesh3 = new THREE.Points(geometry3, material3);
+scene.add(mesh3); // シーンは任意の THREE.Scene インスタンス
 
      
       　 // 光源（環境光）
